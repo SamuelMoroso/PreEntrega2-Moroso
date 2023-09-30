@@ -1,0 +1,392 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-boxs;
+}
+
+body {
+    background-image: url(../assets/img/backgrounds1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 190px 210px auto 410px;
+    grid-template-areas:
+        "header"
+        "imagen"
+        "h2"
+        "texto"
+        "footer";
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+}
+
+header img {
+    width: 110px;
+    padding-top: 10px;
+}
+
+#publicidad {
+    height: 100%;
+    width: 100%;
+    padding-top: 10px;
+}
+
+footer img {
+    width: 100px;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 20% 15%;
+    justify-items: center;
+    align-items: center;
+}
+
+.NavPadre {
+    display: flex;
+    width: 101%;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.MainNav {
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 7px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.884);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+}
+
+.MainNav:hover {
+    background-color: red;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    box-shadow: 0 0 20px rgb(240, 48, 48);
+}
+
+#article1 {
+    grid-area: texto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 50%);
+    gap: 10px;
+    justify-content: center;
+
+}
+
+h2 {
+    grid-area: h2;
+    text-align: center;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.productos {
+    width: 100px;
+}
+
+.productos1 {
+    border: 1px solid rgba(234, 4, 255, 0.685);
+    border-radius: 10px;
+    font-size: small;
+    text-align: center;
+    background-color: white;
+
+}
+
+aside {
+    grid-area: imagen;
+}
+
+footer {
+    height: 20px;
+    grid-area: footer;
+    background-color: rgba(61, 60, 60, 0.527);
+    text-align: center;
+    padding: 1px;
+    color: rgba(255, 255, 255, 0.384);
+}
+
+
+/*COMIENZO DE RESPONSIVE INDEX*/
+
+
+@media (min-width: 768px) and (max-width:823px) {
+
+    #container {
+        grid-template-rows: 190px 400px auto 410px;
+    }
+
+    .MainNav {
+        border: 3px solid rgb(255, 0, 0);
+        border-radius: 7px;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.884);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 25px;
+
+    }
+
+    #publicidad {
+        height: 100%;
+        width: 100%;
+    }
+
+    h2 {
+        grid-area: h2;
+        text-align: center;
+        padding-top: 30px;
+        color: rgb(255, 255, 255);
+    }
+
+
+}
+
+@media (min-width: 1024px) and (max-width:1980px) {
+
+    #container {
+        grid-template-rows: 200px 500px auto 420px;
+    }
+
+    .MainNav {
+        border: 4px solid rgb(255, 0, 0);
+        border-radius: 7px;
+        font-size: 20px;
+        width: 120px;
+        text-align: center;
+        height: 25px;
+    }
+
+    .NavPadre {
+        width: 100%;
+        justify-content: space-around;
+        padding-top: 20px;
+    }
+
+    h2 {
+
+
+        padding-top: 40px;
+        color: rgb(255, 255, 255);
+        font-size: 30px
+    }
+}
+
+@media (min-width: 1440px) {
+
+    #container {
+        grid-template-rows: 200px 2fr auto auto;
+    }
+
+    #publicidad {
+        height: 650px;
+        width: 1500px;
+        padding-top: 0px;
+        border: 2px solid rgba(234, 4, 255, 0.685);
+        border-radius: 8px;
+    }
+
+    #divpublicidad {
+        padding-top: 20px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .MainNav {
+        border: 5px solid rgb(255, 0, 0);
+        font-size: 23px;
+        width: 180px;
+
+    }
+
+    h2 {
+
+        padding-top: 40px;
+        color: rgb(255, 255, 255);
+        font-size: 50px
+    }
+
+    .productos {
+        width: 200px;
+    }
+
+    .productos1 {
+        font-size: medium;
+        width: 70%;
+    }
+
+    #article1 {
+        grid-area: texto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 35% 35%;
+        grid-template-rows: repeat(2, 50%);
+        gap: 20px;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+
+    }
+}
+
+
+/* COMIENZO DE SEGUNDA SECCIÓN GAMING */
+
+
+#gaming {
+    color: red;
+    border-color: white;
+}
+
+#container1 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 180px 480px auto auto;
+    grid-template-areas:
+        "header1"
+        "texto1"
+        "numeros"
+        "footer1"
+    ;
+}
+
+#header1 {
+    grid-area: header1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 20% 15%;
+    justify-items: center;
+    align-items: center;
+}
+
+#article2 {
+    grid-area: texto1;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(6, auto);
+    color: black;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+
+}
+
+.productoss {
+    width: 70px;
+
+}
+
+.productos2 {
+    border: 1px solid rgba(234, 4, 255, 0.685);
+    border-radius: 10px;
+    font-size: small;
+    background-color: white;
+}
+
+#nav3 {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 3px;
+    width: 250px;
+}
+
+.numeros {
+    color: rgb(255, 255, 255);
+    grid-area: numeros;
+    color: rgb(0, 68, 255);
+}
+
+#barraNav {
+    display: grid;
+    border: 1px outset white;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+#footer1 {
+    height: 20px;
+    grid-area: footer1;
+    background-color: rgba(61, 60, 60, 0.527);
+    text-align: center;
+    padding: 1px;
+    color: rgba(255, 255, 255, 0.384);
+}
+
+
+/*COMIENZO DE RESPONSIVE GAMING*/
+
+
+@media (min-width: 768px) {
+
+    #container1 {
+        grid-template-rows: 180px auto auto auto;
+    }
+
+    #article2 {
+        height: 580px;
+    }
+
+    .productos2 {
+        font-size: 16px;
+    }
+
+    .productoss {
+        width: 125px;
+
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #container1 {
+        grid-template-rows: 180px auto auto auto;
+    }
+
+    .productoss {
+        width: 145px;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    #container1 {
+        grid-template-rows: 180px auto auto auto;
+    }
+
+    .productoss {
+        width: 190px;
+    }
+    .productos2 {
+        font-size: 20px;
+    }
+    #article2 {
+        height: 800px;
+    }
+    #footer1 {
+        font-size: larger;
+    }
+
+    #barraNav {
+        display: grid;
+        border: 1px outset white;
+        border-radius: 5px;
+        justify-content: center;
+        font-size: larger;
+    }
+
+}
+
+
+
